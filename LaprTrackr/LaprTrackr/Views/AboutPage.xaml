@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="LaprTrackr.Views.AboutPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:LaprTrackr.ViewModels"
+    Title="{Binding Title}"
+    Visual="Material">
+
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackLayout
+            Grid.Row="0"
+            Margin="0,40,0,0"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+            <Label
+                FontSize="Title"
+                HorizontalOptions="Center"
+                Text="LaprTrackr" />
+            <Label
+                FontSize="Subtitle"
+                HorizontalOptions="Center"
+                Text="Food calorie consumption tracker." />
+        </StackLayout>
+        <StackLayout
+            Grid.Row="1"
+            Margin="0,40,0,0"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+
+            <Label
+                Margin="0,10,0,0"
+                HorizontalOptions="Center"
+                Text="This application is a research project." />
+
+            <Label
+                Margin="0,20,0,0"
+                HorizontalOptions="Center"
+                Text="Created by Fahmi Noor Fiqri." />
+            <Label Text="In collaboration with: Alfi Rahmawan." />
+        </StackLayout>
+        <StackLayout
+            Grid.Row="2"
+            HorizontalOptions="Center"
+            Orientation="Vertical"
+            VerticalOptions="Center">
+            <Button
+                ContentLayout="Left,0"
+                HorizontalOptions="Center"
+                Text="Kodesiana.com"
+                WidthRequest="200" />
+            <Button
+                ContentLayout="Left,0"
+                HorizontalOptions="Center"
+                Text="GitHub/fahminlb33"
+                WidthRequest="200" />
+            <Button
+                ContentLayout="Left,0"
+                HorizontalOptions="Center"
+                Text="IG: fahminoorfiqri"
+                WidthRequest="200" />
+        </StackLayout>
+    </Grid>
+
+</ContentPage>

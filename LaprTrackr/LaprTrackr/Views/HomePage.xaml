@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="LaprTrackr.Views.HomePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:res="clr-namespace:LaprTrackr.Resources"
+    xmlns:vm="clr-namespace:LaprTrackr.ViewModels"
+    Title="{Binding Title}"
+    Visual="Material">
+
+    <ContentPage.BindingContext>
+        <vm:HomeViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <StackLayout
+                Grid.Row="1"
+                HorizontalOptions="Center"
+                Orientation="Vertical">
+                <Label
+                    FontSize="50"
+                    HorizontalOptions="Center"
+                    Text="1900 kkal" />
+                <Label HorizontalOptions="Center" Text="Calorie intake today." />
+                <Label
+                    HorizontalOptions="Center"
+                    Text="BMI: 25.1 Overweight"
+                    TextColor="Red" />
+            </StackLayout>
+
+            <StackLayout
+                Grid.Row="2"
+                Margin="0,150,0,0"
+                HorizontalOptions="CenterAndExpand"
+                Orientation="Horizontal">
+                <Button
+                    Margin="10"
+                    Command="{Binding ScanCommand}"
+                    ContentLayout="Top,0"
+                    HeightRequest="100"
+                    ImageSource="{FontImage FontFamily={StaticResource MaterialFontFamily},
+                                            Size=50,
+                                            Glyph={x:Static res:MaterialDesignIconsKind.DataMatrixPlus}}"
+                    Text="Scan"
+                    WidthRequest="100" />
+                <Button
+                    Margin="10"
+                    ContentLayout="Top,0"
+                    HeightRequest="100"
+                    ImageSource="{FontImage FontFamily={StaticResource MaterialFontFamily},
+                                            Size=50,
+                                            Glyph={x:Static res:MaterialDesignIconsKind.PlusCircle}}"
+                    Text="Add"
+                    WidthRequest="100" />
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1032859505780",
+    "project_id": "laprtrackr",
+    "storage_bucket": "laprtrackr.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1032859505780:android:1a1675d8007764ed76ed21",
+        "android_client_info": {
+          "package_name": "com.kodesiana.laprtrackr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1032859505780-k1r8ekbkhepe559ulms5kl6josb2qckr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCwHzdn-10QM-NGzXWfRd5eFI2v_sGyWE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1032859505780-k1r8ekbkhepe559ulms5kl6josb2qckr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

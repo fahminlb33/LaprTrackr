@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="LaprTrackr.Views.ProfilePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:res="clr-namespace:LaprTrackr.Resources"
+    xmlns:vm="clr-namespace:LaprTrackr.ViewModels"
+    Title="{Binding Title}"
+    Visual="Material">
+
+    <ContentPage.BindingContext>
+        <vm:ProfileViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0" Margin="0,0,0,100">
+                <Label
+                    FontSize="Medium"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Welcome back," />
+                <Label
+                    FontSize="40"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Fahmi!" />
+            </StackLayout>
+            <StackLayout Grid.Row="1">
+                <Label HorizontalOptions="CenterAndExpand" Text="Body profile (for better measurement, optional)." />
+
+                <Entry Placeholder="Body height (cm)" />
+                <Entry Placeholder="Body weight (kg)" />
+
+                <Button ImageSource="{FontImage FontFamily={StaticResource MaterialFontFamily}, Glyph={x:Static res:MaterialDesignIconsKind.ContentSave}}" Text="Save Profile" />
+                <Button
+                    Command="{Binding LoginCommand}"
+                    ImageSource="{FontImage FontFamily={StaticResource MaterialFontFamily},
+                                            Glyph={x:Static res:MaterialDesignIconsKind.Google}}"
+                    Text="Login with Google" />
+            </StackLayout>
+            <Button
+                Grid.Row="2"
+                Margin="0,15,0,0"
+                Command="{Binding AboutCommand}"
+                ImageSource="{FontImage FontFamily={StaticResource MaterialFontFamily},
+                                        Glyph={x:Static res:MaterialDesignIconsKind.Information}}"
+                Text="About" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
